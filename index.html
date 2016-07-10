@@ -1,0 +1,58 @@
+---
+layout: default
+title: 'Home'
+---
+
+<style>
+    .l-box {
+        padding: 2em;
+        }
+</style>
+
+<div class="pure-g">
+<div class="pure-u-1-2" >
+
+<div class="vh">
+<div class="l-box">
+<!-- pure-img makes image scalable-->
+<img class="pure-img" src="website_nw.png" size="300px">
+</div>
+</div>
+
+</div>
+
+<div class="pure-u-1-2" >
+
+<div class="vh">
+
+<p> I am a freshwater ecologist with a wide-range of experience studying small streams, large rivers, isolated wetlands and glacial lakes. I completed my PhD in Ecology with Dr. Thibault Datry in December 2015 from the University of Claude Bernard in Lyon, France. During my PhD, I studied how surface water drying in rivers affects macroinvertebrate community structure and ecosystem functioning. I earned his Master’s Degree with Dr. Nels Troelstrup Jr. in 2010 in Biological Sciences from South Dakota State University (SDSU) where I studied macroinvertebrate communities, habitat and water quality in intermittent headwater streams across eastern South Dakota. I received my Bachelor’s Degree in Environmental Management from SDSU in 2006. I also worked as an Environmental Scientist for the Department of Environmental and Natural Resources in Raleigh, North Carolina.
+
+At Virginia Tech, I am working on an Office of Surface Mining project to study the process of leaf litter decomposition, a key carbon-processing function, in headwater streams affected by coal-mining activities in the Appalachian region of the USA. This project involves quantifying leaf litter decomposition as well as macroinvertebrate and microbial diversity across 24 headwater streams with the goal of determining the influence of mining-induced salinity on leaf litter decomposition. </p>
+
+
+</div>
+</div>
+</div>
+
+<hr style="height: 1px; color:#d5d5d5; border:none; background-color:#d5d5d5;" />
+
+## Latest news
+
+<ul class="posts">
+<!-- the below show's the latest 5 posts and adds a bit of text (first 20 words) from post as well as the title-->
+	  {% for post in site.posts limit:5 %}
+	    <li><span style="color: #999;" >{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> »
+	    {{ post.content | strip_html | truncatewords:20}}
+	    <a href="{{ post.url }}">Read more...</a></li>
+	    <br>
+	  {% endfor %}
+	</ul>
+
+
+
+<!--
+<i class="fa fa-fw fa-envelope"></i><span style="color:#999"> vandervorste.ross [at] gmail.com</span>
+<i class="fa fa-fw fa-twitter"></i><span style="color:#999"> @RiversRossV</span>
+-->
+<a href="https://twitter.com/riversrossv" class="twitter-follow-button" data-show-count="false">Follow @RiversRossV</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
